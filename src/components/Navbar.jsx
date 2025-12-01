@@ -3,7 +3,7 @@ import {assets} from '../assets/assets'
 import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
 
-  const [visible,setVisible]=useState(false)
+  const [visible,setVisible]=useState(false);
   return (
     <div className='flex item-center justify-between py-5 font-medium'>
       <img src={assets.logo} className='w-36' alt="" />
@@ -58,7 +58,14 @@ const Navbar = () => {
 
      </div>
     {/*sidebar menu for small screen*/}
-    <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full':'w-0'} `}></div>    
+    <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full':'w-0'} `}>
+      <div className='flex flex-col text-gray-600'>
+        <div className='flex items-center gap-4 p-3 '>
+          <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
+          <p>Back</p>
+        </div>
+      </div>
+      </div>    
     </div>
   )
 }
