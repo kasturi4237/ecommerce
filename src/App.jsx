@@ -7,6 +7,8 @@ import Contact from './pages/Contact'
 
 
 import Navbar from './components/NavBar'
+import Footer from './components/Footer'
+
 
 
 
@@ -20,10 +22,12 @@ const App = () => {
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
        
+       
 
         
 
       </Routes>
+      <Footer/>
       
     </div>
   )
