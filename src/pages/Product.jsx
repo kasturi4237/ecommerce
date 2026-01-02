@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
-import { assets, products } from '../assets/assets';
+import { assets,  } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
 
@@ -88,8 +89,8 @@ const Product = () => {
       {/* -------description and REVIEW SECTION-------- */}
       <div className='mt-20'>
         <div className='flex'>
-          <b className='border px-5 py-3 text:sm'>Description</b>
-          <p className='border px-5 py-3 text:sm'>Reviews (122) </p>
+          <b className='border px-5 py-3 text-sm'>Description</b>
+          <p className='border px-5 py-3 text-sm'>Reviews (122) </p>
         </div>
         <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500  '>
           <p>We are an e-commerce platform designed to make online shopping simple and convenient. Our aim is to provide a wide range of products at affordable prices with a smooth and secure shopping experience.This is a premium quality product crafted to deliver comfort, durability, and style. Perfect for daily use. Designed with attention to detail and made using high-quality materials.</p>
@@ -98,7 +99,7 @@ const Product = () => {
 
       </div>
       {/*----------RELATED PRODUCTS---------- */}
-      <div className=''></div>
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
       
     </div>
   ): <div className='opacity-0'></div>
