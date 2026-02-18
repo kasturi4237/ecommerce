@@ -14,7 +14,7 @@ const ShopContextProvider=(props)=>{
     const addToCart=async(itemId,size)=>{
 
         if(!size){
-            toast  
+              toast  
         }
         let cartData= structuredClone(cartItems);
         if(cartData[itemId]){
